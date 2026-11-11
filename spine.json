@@ -1,0 +1,11 @@
+{
+  "name": "scout",
+  "repo": "scoutbin/scout",
+  "summary": "Codebase explore context",
+  "license": "Apache-2.0",
+  "channels": {
+    "homebrew": { "tap": "scoutbin/homebrew-tap" },
+    "npm": { "package": "@scoutbin/scout" },
+    "action": true
+  }
+}
