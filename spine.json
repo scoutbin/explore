@@ -1,6 +1,7 @@
 {
   "name": "explore",
   "repo": "scoutbin/explore",
+  "alias": "xp",
   "summary": "Codebase explore context",
   "license": "Apache-2.0",
   "channels": {
