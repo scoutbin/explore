@@ -1,4 +1,4 @@
-module github.com/scoutbin/scout
+module github.com/scoutbin/explore
 
 go 1.24.2
 

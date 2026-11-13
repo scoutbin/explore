@@ -1,6 +1,6 @@
 # AGENTS.md
 
-scout gives codebase explore context.
+explore gives codebase explore context.
 
 - Built on spine (`github.com/scoutbin/spine`): `spine.json` is the tool descriptor, releases come from spine's reusable workflows.
 

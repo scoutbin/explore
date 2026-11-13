@@ -1,34 +1,34 @@
-# scout
+# explore
 
-scout gives codebase explore context. It is built on [spine](https://github.com/scoutbin/spine), the shared core for scoutbin's command-line tools.
+explore gives codebase explore context. It is built on [spine](https://github.com/scoutbin/spine), the shared core for scoutbin's command-line tools.
 
 ## Status
 
-scout is in early development. It has no scout-specific commands yet. The binary only has the built-in commands listed below. This README will change as features land.
+explore is in early development. It has no explore-specific commands yet. The binary only has the built-in commands listed below. This README will change as features land.
 
 ## Install
 
 Homebrew (macOS and Linux):
 
 ```sh
-brew install scoutbin/tap/scout
+brew install scoutbin/tap/explore
 ```
 
 npm:
 
 ```sh
-npm install -g @scoutbin/scout
+npm install -g @scoutbin/explore
 ```
 
 Shell installer for macOS and Linux. It needs curl or wget, and it verifies the SHA-256 checksum before installing:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/scoutbin/scout/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/scoutbin/explore/main/install.sh | sh
 ```
 
 Windows: run `install.ps1` from the repository root in PowerShell 5.1 or later, or in pwsh. You can also use npm.
 
-Manual install: GitHub Releases has archives named `scout_<version>_<os>_<arch>.tar.gz` (`.zip` on Windows) for darwin, linux and windows, on amd64 and arm64. Each release includes a `checksums.txt`.
+Manual install: GitHub Releases has archives named `explore_<version>_<os>_<arch>.tar.gz` (`.zip` on Windows) for darwin, linux and windows, on amd64 and arm64. Each release includes a `checksums.txt`.
 
 ### Installer variables
 
@@ -36,12 +36,12 @@ Manual install: GitHub Releases has archives named `scout_<version>_<os>_<arch>.
 
 | Variable | Default | Purpose |
 | --- | --- | --- |
-| `SCOUT_VERSION` | Newest release on the track | Install this tag. Takes precedence over `SCOUT_TRACK` |
-| `SCOUT_TRACK` | `stable` | `stable`, `alpha`, `beta` or `rc` |
-| `SCOUT_INSTALL_DIR` | `~/.local/bin` (install.sh), `%LOCALAPPDATA%\scout\bin` (install.ps1) | Install directory |
-| `SCOUT_NO_MODIFY_PATH` | Unset | Set to `1` to stop the installer from changing PATH |
-| `SCOUT_DOWNLOAD_BASE_URL` | GitHub | install.sh only. Mirror for release assets. Must start with `https://` or `file://`. Requires `SCOUT_VERSION` |
-| `SCOUT_GITHUB_TOKEN` | None | Token for the release lookup, to avoid the API rate limit. Not sent with downloads |
+| `EXPLORE_VERSION` | Newest release on the track | Install this tag. Takes precedence over `EXPLORE_TRACK` |
+| `EXPLORE_TRACK` | `stable` | `stable`, `alpha`, `beta` or `rc` |
+| `EXPLORE_INSTALL_DIR` | `~/.local/bin` (install.sh), `%LOCALAPPDATA%\explore\bin` (install.ps1) | Install directory |
+| `EXPLORE_NO_MODIFY_PATH` | Unset | Set to `1` to stop the installer from changing PATH |
+| `EXPLORE_DOWNLOAD_BASE_URL` | GitHub | install.sh only. Mirror for release assets. Must start with `https://` or `file://`. Requires `EXPLORE_VERSION` |
+| `EXPLORE_GITHUB_TOKEN` | None | Token for the release lookup, to avoid the API rate limit. Not sent with downloads |
 
 A track installs the newest release on its upgrade path. `rc` takes rc or stable releases. `beta` takes beta, rc or stable. `alpha` takes any prerelease or stable.
 
@@ -60,10 +60,10 @@ Exit codes: 0 for success, 1 when `check` finds an update, and 2 for any other e
 
 ## GitHub Action
 
-The action installs the scout binary. It does not run scout.
+The action installs the explore binary. It does not run explore.
 
 ```yaml
-- uses: scoutbin/scout@<ref>
+- uses: scoutbin/explore@<ref>
   with:
     version: v0.1.1
 ```
@@ -72,7 +72,7 @@ The action installs the scout binary. It does not run scout.
 | --- | --- | --- |
 | `version` | Newest release on the track | Release tag to install. Takes precedence over `track` |
 | `track` | `stable` | `stable`, `alpha`, `beta` or `rc` |
-| `install-dir` | `$RUNNER_TEMP/scout/bin` (Windows: `RUNNER_TEMP\scout\bin`) | Install directory. Relative paths resolve from the workspace |
+| `install-dir` | `$RUNNER_TEMP/explore/bin` (Windows: `RUNNER_TEMP\explore\bin`) | Install directory. Relative paths resolve from the workspace |
 | `token` | `github.token` | Token for the release lookup. Not used for downloads |
 
 Outputs: `version` (the installed tag) and `path` (the absolute path of the executable).
