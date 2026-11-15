@@ -81,7 +81,7 @@ Outputs: `version` (the installed tag) and `path` (the absolute path of the exec
 
 ## Feedback
 
-Report bugs and request features in [GitHub Issues](https://github.com/scoutbin/explore/issues). Pull requests are not accepted. See [CONTRIBUTING.md](CONTRIBUTING.md) for what to include in a report, and [SECURITY.md](SECURITY.md) for reporting vulnerabilities.
+Report bugs and request features in [GitHub Issues](https://github.com/scoutbin/explore/issues). Pull requests are not accepted. See [CONTRIBUTING.md](https://github.com/scoutbin/.github/blob/main/CONTRIBUTING.md) for what to include in a report, and [SECURITY.md](https://github.com/scoutbin/.github/blob/main/SECURITY.md) for reporting vulnerabilities.
 
 ## License
 
